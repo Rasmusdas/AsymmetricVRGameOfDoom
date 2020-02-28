@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/SteamVR/Simple Sample.unity
-  isLoaded: 0
-  isActive: 0
+- path: Assets/Scenes/Playgrounds/Playground_J.unity
+  isLoaded: 1
+  isActive: 1
   isSubScene: 0
