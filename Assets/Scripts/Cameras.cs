@@ -6,6 +6,7 @@ public class Cameras : MonoBehaviour
 {
     public static Dictionary<string, Camera> cameraList = new Dictionary<string, Camera>();
     public Camera currentCam;
+    public RenderTexture roofCamera;
 
     [SerializeField]
     private Camera[] cameras;
@@ -31,12 +32,8 @@ public class Cameras : MonoBehaviour
     {
         if(cameraList.ContainsKey(cam.name.ToLower()))
         {
-            if(currentCam != null)
-            {
-                currentCam.enabled = false;
-            }
             currentCam = cameraList[cam.name.ToLower()];
-            currentCam.enabled = true;
+            currentCam.targetTexture = roofCamera;
         }
     }
 
@@ -52,9 +49,7 @@ public class Cameras : MonoBehaviour
                 {
                     SwapCamera(cameraList[input]);
                 }
-
                 break;
         }
-
     }
 }
