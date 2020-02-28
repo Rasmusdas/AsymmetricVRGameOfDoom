@@ -23,6 +23,22 @@ public class Cameras : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        // Rotation of Cameras
+        if(currentCam != null)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                currentCam.gameObject.GetComponent<SurveillanceCamera>().ChangeRotation(true);
+            }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                currentCam.gameObject.GetComponent<SurveillanceCamera>().ChangeRotation(false);
+            }
+        }
+    }
+
     public static void AddCamera(Camera cam)
     {
         if(!cameraList.ContainsKey(cam.name.ToLower()))
