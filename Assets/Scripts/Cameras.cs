@@ -5,6 +5,8 @@ using UnityEngine;
 public class Cameras : MonoBehaviour
 {
     public static Dictionary<string, Camera> cameraList = new Dictionary<string, Camera>();
+    public static Dictionary<string, Camera> doorList = new Dictionary<string, Camera>();
+
     public Camera currentCam;
     public RenderTexture roofCamera;
 
@@ -27,6 +29,10 @@ public class Cameras : MonoBehaviour
             cameraList.Add(cam.name.ToLower(), cam);
         }
     }
+    public static void AddDoor(GameObject door)
+    {
+
+    }
 
     public void SwapCamera(Camera cam)
     {
@@ -42,13 +48,17 @@ public class Cameras : MonoBehaviour
         s = s.ToLower();
         string command = s.Split('.')[0];
         string input = s.Split('.')[1];
-        switch(command)
+        switch (command)
         {
             case "hack":
-                if(cameraList.ContainsKey(input))
+                if (cameraList.ContainsKey(input))
                 {
                     SwapCamera(cameraList[input]);
                 }
+                break;
+            case "open":
+                break;
+            default:
                 break;
         }
     }
