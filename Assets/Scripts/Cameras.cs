@@ -46,21 +46,36 @@ public class Cameras : MonoBehaviour
 
     public void HandleCommand(string s)
     {
+        if (s.Length == 0) return;
         s = s.ToLower();
-        string command = s.Split('.')[0];
-        string input = s.Split('.')[1];
+        string command = s;
+        string input = "";
+        if (s.Contains("."))
+        {
+            command = s.Split('.')[0];
+            input = s.Split('.')[1];
+        }
         switch (command)
         {
             case "hack":
                 if (cameraList.ContainsKey(input))
                 {
                     SwapCamera(cameraList[input]);
+                    console.WriteLine(string.Format("Connecting to camera \"{0}\"",input));
+                }
+                else if(input.Length != 0)
+                {
+                    console.WriteLine(string.Format("Camera \"{0}\" could not found or is unavailable", input));
+                }
+                else
+                {
+                    console.WriteLine("Argument missing, hack.[arg]");
                 }
                 break;
             case "open":
                 break;
             default:
-                console.WriteLine("Sucsess!");
+                console.WriteLine(string.Format("\"{0}\" is not a recognized command",s));
                 break;
         }
     }
