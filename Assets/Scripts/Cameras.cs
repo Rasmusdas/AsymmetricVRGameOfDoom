@@ -5,6 +5,8 @@ using UnityEngine;
 public class Cameras : MonoBehaviour
 {
     public static Dictionary<string, Camera> cameraList = new Dictionary<string, Camera>();
+    public static Dictionary<string, Camera> doorList = new Dictionary<string, Camera>();
+
     public Camera currentCam;
     public RenderTexture roofCamera;
 
@@ -26,6 +28,10 @@ public class Cameras : MonoBehaviour
         {
             cameraList.Add(cam.name.ToLower(), cam);
         }
+    }
+    public static void AddDoor(GameObject door)
+    {
+
     }
 
     public void SwapCamera(Camera cam)
@@ -50,6 +56,33 @@ public class Cameras : MonoBehaviour
                     SwapCamera(cameraList[input]);
                 }
                 break;
+            case "open":
+                if()
+            default:
+                break;
+        }
+    }
+
+    class Door : MonoBehaviour
+    {
+        public bool locked;
+        Rigidbody rb;
+
+        private void Start()
+        {
+            rb = GetComponent<Rigidbody>();
+        }
+
+        private void Update()
+        {
+            if(locked)
+            {
+                rb.freezeRotation = true;
+            }
+            else
+            {
+                rb.freezeRotation = false;
+            }
         }
     }
 }
