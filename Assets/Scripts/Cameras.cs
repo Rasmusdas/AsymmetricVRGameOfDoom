@@ -21,29 +21,30 @@ public class Cameras : MonoBehaviour
 
     public static void AddCamera(Camera cam)
     {
-        if(!cameraList.ContainsKey(cam.name))
+        if(!cameraList.ContainsKey(cam.name.ToLower()))
         {
-            cameraList.Add(cam.name, cam);
+            cameraList.Add(cam.name.ToLower(), cam);
         }
     }
 
     public void SwapCamera(Camera cam)
     {
-        if(cameraList.ContainsKey(cam.name))
+        if(cameraList.ContainsKey(cam.name.ToLower()))
         {
             if(currentCam != null)
             {
                 currentCam.enabled = false;
             }
-            currentCam = cameraList[cam.name];
+            currentCam = cameraList[cam.name.ToLower()];
             currentCam.enabled = true;
         }
     }
 
     public void HandleCommand(string s)
     {
-        string command = s.Split(' ')[0];
-        string input = s.Split(' ')[1];
+        s = s.ToLower();
+        string command = s.Split('.')[0];
+        string input = s.Split('.')[1];
         switch(command)
         {
             case "hack":
@@ -51,7 +52,9 @@ public class Cameras : MonoBehaviour
                 {
                     SwapCamera(cameraList[input]);
                 }
+
                 break;
         }
+
     }
 }
