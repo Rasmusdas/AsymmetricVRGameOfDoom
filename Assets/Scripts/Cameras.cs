@@ -9,6 +9,7 @@ public class Cameras : MonoBehaviour
 
     public Camera currentCam;
     public RenderTexture roofCamera;
+    public ConsoleScreen console;
 
     [SerializeField]
     private Camera[] cameras;
@@ -59,6 +60,7 @@ public class Cameras : MonoBehaviour
             case "open":
                 break;
             default:
+                console.WriteLine("Sucsess!");
                 break;
         }
     }

@@ -7,12 +7,6 @@ public class ConsoleScreen : MonoBehaviour
 {
     public string[] lines = new string [5];
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +21,7 @@ public class ConsoleScreen : MonoBehaviour
 
     public void WriteLine(string line)
     {
-        for (int i = lines.Length; i > 0; i--)
+        for (int i = lines.Length-1; i > 0; i--)
         {
             lines[i] = lines[i - 1];
         }
