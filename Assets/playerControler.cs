@@ -11,12 +11,11 @@ public class playerControler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position += speed * Time.deltaTime * new Vector3(input.axis.x,0, input.axis.y);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += speed * Time.deltaTime * new Vector3(input.axis.x, 0, input.axis.y);
     }
 }

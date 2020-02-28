@@ -63,6 +63,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AddCameras.cs" />
+    <Compile Include="Assets\Scripts\Cameras.cs" />
+    <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\playerControler.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity/Project/AsymmetricVRGameOfDoom/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
