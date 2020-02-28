@@ -61,7 +61,7 @@ public class Cameras : MonoBehaviour
                 if (cameraList.ContainsKey(input))
                 {
                     SwapCamera(cameraList[input]);
-                    console.WriteLine(string.Format("Connecting to camera \"{0}\"",input));
+                    console.WriteLine(string.Format("Connecting to \"{0}\"",input));
                 }
                 else if(input.Length != 0)
                 {
