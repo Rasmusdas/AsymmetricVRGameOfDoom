@@ -48,41 +48,18 @@ public class Cameras : MonoBehaviour
         s = s.ToLower();
         string command = s.Split('.')[0];
         string input = s.Split('.')[1];
-        switch(command)
+        switch (command)
         {
             case "hack":
-                if(cameraList.ContainsKey(input))
+                if (cameraList.ContainsKey(input))
                 {
                     SwapCamera(cameraList[input]);
                 }
                 break;
             case "open":
-                if()
+                break;
             default:
                 break;
-        }
-    }
-
-    class Door : MonoBehaviour
-    {
-        public bool locked;
-        Rigidbody rb;
-
-        private void Start()
-        {
-            rb = GetComponent<Rigidbody>();
-        }
-
-        private void Update()
-        {
-            if(locked)
-            {
-                rb.freezeRotation = true;
-            }
-            else
-            {
-                rb.freezeRotation = false;
-            }
         }
     }
 }
