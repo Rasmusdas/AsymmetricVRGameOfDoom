@@ -17,6 +17,7 @@ public class CommandHandler : MonoBehaviour
 
     public VaultDoor vaultdoor;
     public static bool vaultOpen;
+    public bool overrideDone;
 
     [SerializeField]
     private GameObject[] cameras;
@@ -178,7 +179,7 @@ public class CommandHandler : MonoBehaviour
             case "open":
                 if(input == "vaultdoor")
                 {
-                    if(vaultOpen)
+                    if(vaultOpen && overrideDone)
                     {
                         StartCoroutine(OpenVaultDoor());
                         console.WriteLine("Vault door opened");
@@ -220,6 +221,7 @@ public class CommandHandler : MonoBehaviour
             case "override":
                 if(vaultdoor.name == input)
                 {
+                    overrideDone = true;
                     console.WriteLine(string.Format("Security override complete. Vault door unlocked."));
                     console.WriteLine("Type open.vaultdoor to open the vault door");
                 }
