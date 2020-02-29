@@ -24,13 +24,13 @@ public class EndLevelManager : MonoBehaviour
 
     public void NextLevel()
     {
-        if (LevelManager.LastLevel.name == "Tutorial")
+        if (LevelManager.LastLevel == "Tutorial")
         {
             SceneManager.LoadScene("Level 1");
         }
         else
         {
-            int.TryParse(LevelManager.LastLevel.name.Split(' ')[1], out int number);
+            int.TryParse(LevelManager.LastLevel.Split(' ')[1], out int number);
             SceneManager.LoadScene("Level " + number);
         }
     }
