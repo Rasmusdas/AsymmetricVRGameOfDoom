@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CommandHandler : MonoBehaviour
 {
-    public static Dictionary<string, Camera> cameraList = new Dictionary<string, Camera>();
+    public static Dictionary<string, GameObject> cameraList = new Dictionary<string, GameObject>();
     public static Dictionary<string, Door> doorList = new Dictionary<string, Door>();
     public static Dictionary<string, GameObject> lightList = new Dictionary<string, GameObject>();
 
-    public Camera currentCam;
+    public GameObject currentCam;
     public RenderTexture roofCamera;
     public ConsoleScreen console;
 
@@ -16,7 +16,7 @@ public class CommandHandler : MonoBehaviour
     public float lightTimer;
 
     [SerializeField]
-    private Camera[] cameras;
+    private GameObject[] cameras;
 
     [SerializeField]
     private Door[] doors;
@@ -26,8 +26,7 @@ public class CommandHandler : MonoBehaviour
 
     private void Awake()
     {
-        currentCam = Camera.current;
-        foreach (Camera cam in cameras)
+        foreach (GameObject cam in cameras)
         {
             AddCamera(cam);
         }
@@ -57,7 +56,7 @@ public class CommandHandler : MonoBehaviour
         }
     }
 
-    public static void AddCamera(Camera cam)
+    public static void AddCamera(GameObject cam)
     {
         if(!cameraList.ContainsKey(cam.name.ToLower()))
         {
@@ -81,12 +80,12 @@ public class CommandHandler : MonoBehaviour
         }
     }
 
-    public void SwapCamera(Camera cam)
+    public void SwapCamera(GameObject cam)
     {
         if(cameraList.ContainsKey(cam.name.ToLower()))
         {
-            currentCam = cameraList[cam.name.ToLower()];
-            currentCam.targetTexture = roofCamera;
+            currentCam = cameraList[cam.name.ToLower()].GetComponent<SurveillanceCamera>().gameObject;
+            currentCam.GetComponent<SurveillanceCamera>().survCam.targetTexture = roofCamera;
         }
     }
 
