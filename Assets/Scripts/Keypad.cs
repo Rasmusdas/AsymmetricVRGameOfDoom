@@ -9,7 +9,10 @@ public class Keypad : MonoBehaviour
 
     void Start()
     {
-        text.text = name;    
+        if(door != null)
+        {
+            text.text = door.name;
+        }
     }
 
     // Update is called once per frame

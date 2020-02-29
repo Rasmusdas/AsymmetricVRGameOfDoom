@@ -29,16 +29,56 @@ public class CommandHandler : MonoBehaviour
 
     private void Awake()
     {
+        List<int> taken = new List<int>();
         foreach (GameObject cam in cameras)
         {
+            int random = Random.Range(0, 99);
+            while (taken.Contains(random))
+            {
+                random = Random.Range(0, 99);
+            }
+            if (random < 10)
+            {
+                cam.name = "0" + random;
+            }
+            else
+            {
+                cam.name = random.ToString();
+            }
             AddCamera(cam);
         }
         foreach (Door door in doors)
         {
+            int random = Random.Range(0, 99);
+            while (taken.Contains(random))
+            {
+                random = Random.Range(0, 99);
+            }
+            if (random < 10)
+            {
+                door.name = "0" + random;
+            }
+            else
+            {
+                door.name = random.ToString();
+            }
             AddDoor(door);
         }
         foreach (GameObject light in lights)
         {
+            int random = Random.Range(0, 99);
+            while (taken.Contains(random))
+            {
+                random = Random.Range(0, 99);
+            }
+            if (random < 10)
+            {
+                light.name = "0" + random;
+            }
+            else
+            {
+                light.name = random.ToString();
+            }
             AddLight(light);
         }
     }
