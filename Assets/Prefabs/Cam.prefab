@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 7947278043101162801}
   m_Layer: 0
   m_Name: SurvCam
-  m_TagString: Untagged
+  m_TagString: SurvCam
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
