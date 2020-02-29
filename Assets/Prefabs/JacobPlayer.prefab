@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &451496843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 451496844}
+  m_Layer: 8
+  m_Name: RhandTras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &451496844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451496843}
+  m_LocalRotation: {x: -0.5594102, y: -0.3750216, z: -0.494725, w: 0.54924154}
+  m_LocalPosition: {x: -1.047, y: -1.862, z: -1.317}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6896139301042272329}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -80.254005, y: 56.741, z: -132.97}
 --- !u!1 &3248885140434558382
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,8 +505,7 @@ MonoBehaviour:
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
-  renderModelPrefab: {fileID: 6900194745241354043, guid: 203fee21938fb824bbc4f92a6ab3005e,
-    type: 3}
+  renderModelPrefab: {fileID: 0}
   renderModels: []
   mainRenderModel: {fileID: 0}
   hoverhighlightRenderModel: {fileID: 0}
@@ -616,8 +645,7 @@ MonoBehaviour:
   noSteamVRFallbackCamera: {fileID: 0}
   noSteamVRFallbackMaxDistanceNoItem: 10
   noSteamVRFallbackMaxDistanceWithItem: 0.5
-  renderModelPrefab: {fileID: 4401006881728138335, guid: 483c9b8935bbdbf47ab998aee0c89549,
-    type: 3}
+  renderModelPrefab: {fileID: 0}
   renderModels: []
   mainRenderModel: {fileID: 0}
   hoverhighlightRenderModel: {fileID: 0}
@@ -1174,6 +1202,7 @@ Transform:
   - {fileID: 6896139301042311237}
   - {fileID: 6897887169115659923}
   - {fileID: 6897887168883010331}
+  - {fileID: 451496844}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
