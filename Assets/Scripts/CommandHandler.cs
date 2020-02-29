@@ -130,6 +130,7 @@ public class CommandHandler : MonoBehaviour
         {
             currentCam = cameraList[cam.name.ToLower()].GetComponent<SurveillanceCamera>().gameObject;
             currentCam.GetComponent<SurveillanceCamera>().survCam.targetTexture = roofCamera;
+            currentCam.GetComponent<AudioSource>().Play();
         }
     }
 
