@@ -33,11 +33,11 @@ public class CommandHandler : MonoBehaviour
         cameras = GameObject.FindGameObjectsWithTag("SurvCam");
         GameObject[] tempDoors = GameObject.FindGameObjectsWithTag("Door");
         doors = new Door[tempDoors.Length];
-        for (int i = 0; i < tempDoors.Length; i++)
+        for (int i = 0; i < doors.Length; i++)
         {
             doors[i] = tempDoors[i].GetComponent<Door>();
         }
-        lights = GameObject.FindGameObjectsWithTag("GameLight");
+        lights = GameObject.FindGameObjectsWithTag("GameLights");
         List<int> taken = new List<int>();
         foreach (GameObject cam in cameras)
         {
@@ -58,6 +58,10 @@ public class CommandHandler : MonoBehaviour
         }
         foreach (Door door in doors)
         {
+            if(door.name == "exit")
+            {
+                continue;
+            }
             int random = Random.Range(0, 99);
             while (taken.Contains(random))
             {
