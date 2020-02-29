@@ -17,7 +17,7 @@ public class CommandHandler : MonoBehaviour
 
     public VaultDoor vaultdoor;
     public static bool vaultOpen;
-    public bool overrideDone;
+    public static bool overrideDone;
 
     [SerializeField]
     private GameObject[] cameras;
