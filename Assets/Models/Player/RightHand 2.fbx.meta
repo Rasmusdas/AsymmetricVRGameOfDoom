@@ -1,0 +1,285 @@
+fileFormatVersion: 2
+guid: c2e471b8b954bda498cb444cf00b0056
+ModelImporter:
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      74: -8255010559817387929
+    second: open
+  - first:
+      74: -3797715431909369934
+    second: grab
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: open
+      takeName: RightHandRig|RightHandRigAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 0.10000001
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: grab
+      takeName: RightHandRig|RightHandRigAction
+      internalID: 0
+      firstFrame: 9
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: RightHand 2(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Right Hand
+      parentName: RightHand 2(Clone)
+      position: {x: 8.451475, y: 11.00747, z: 3.871545}
+      rotation: {x: 0.7071067, y: 0.000000030908616, z: 0.000000030908623, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: RightHandRig
+      parentName: RightHand 2(Clone)
+      position: {x: 6.9133463, y: 11.023134, z: 4.1634173}
+      rotation: {x: 0.000000021855694, y: 6.123234e-17, z: 6.1232336e-17, w: 1}
+      scale: {x: 100, y: 100, z: 100}
+    - name: Wrist.R
+      parentName: RightHandRig
+      position: {x: 0.00017990134, y: 0.000321522, z: -0.004336825}
+      rotation: {x: -0.47225958, y: -0.5290661, z: -0.49301827, w: 0.5039771}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: Hand.R
+      parentName: Wrist.R
+      position: {x: 6.2515026e-10, y: 0.01371205, z: -1.0710209e-10}
+      rotation: {x: -0.03394883, y: 0.00036693152, z: -0.030044077, w: 0.9989718}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1}
+    - name: Finger1Start.R
+      parentName: Hand.R
+      position: {x: 0.0076292986, y: 0.0110488385, z: -0.00038557168}
+      rotation: {x: -0.062128067, y: -0.001281116, z: 0.014372268, w: 0.9979639}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger1Mid.R
+      parentName: Finger1Start.R
+      position: {x: 3.4848652e-10, y: 0.006379036, z: -1.3969838e-11}
+      rotation: {x: -0.028624605, y: -0.002048802, z: 0.013071883, w: 0.99950266}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.9999999}
+    - name: Finger1End.R
+      parentName: Finger1Mid.R
+      position: {x: 2.0510924e-10, y: 0.007097437, z: 3.259629e-11}
+      rotation: {x: -0.035454705, y: 0.00021207346, z: 0.00068561663, w: 0.99937105}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999998}
+    - name: Finger1End.R_end
+      parentName: Finger1End.R
+      position: {x: -0, y: 0.004984131, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger2Start.R
+      parentName: Hand.R
+      position: {x: 0.0025396326, y: 0.011234736, z: -0.0009925751}
+      rotation: {x: -0.049981624, y: -0.0013552341, z: 0.024927782, w: 0.9984381}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Finger2Mid.R
+      parentName: Finger2Start.R
+      position: {x: 1.6732883e-10, y: 0.007922477, z: 1.3591489e-10}
+      rotation: {x: -0.040856745, y: 0.0017433128, z: -0.016764408, w: 0.99902284}
+      scale: {x: 1, y: 0.9999999, z: 0.99999994}
+    - name: Finger2End.R
+      parentName: Finger2Mid.R
+      position: {x: 1.3009412e-10, y: 0.007092911, z: 4.272442e-10}
+      rotation: {x: -0.03888715, y: -0.0038826694, z: 0.02035207, w: 0.9990288}
+      scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
+    - name: Finger2End.R_end
+      parentName: Finger2End.R
+      position: {x: -0, y: 0.0048519666, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger3Start.R
+      parentName: Hand.R
+      position: {x: -0.0028861451, y: 0.010095453, z: -0.0005237034}
+      rotation: {x: -0.05524398, y: -0.00022484905, z: -0.0026862135, w: 0.9984693}
+      scale: {x: 0.9999999, y: 0.9999999, z: 1}
+    - name: Finger3Mid.R
+      parentName: Finger3Start.R
+      position: {x: -4.0969553e-10, y: 0.0071725193, z: -2.3748725e-10}
+      rotation: {x: -0.049625795, y: -0.0012323511, z: 0.0029459961, w: 0.9987628}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: Finger3End.R
+      parentName: Finger3Mid.R
+      position: {x: 9.051291e-11, y: 0.006154964, z: -2.1420418e-10}
+      rotation: {x: -0.019154085, y: -0.003074956, z: 0.01798902, w: 0.99965}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Finger3End.R_end
+      parentName: Finger3End.R
+      position: {x: -0, y: 0.0050699264, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Finger4Start.R
+      parentName: Hand.R
+      position: {x: -0.008579328, y: 0.008647948, z: 0.00017860258}
+      rotation: {x: -0.065110646, y: 0.00063987967, z: -0.023409633, w: 0.99760324}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Finger4Mid.R
+      parentName: Finger4Start.R
+      position: {x: 5.2226823e-10, y: 0.00608943, z: -2.7939676e-10}
+      rotation: {x: -0.035577282, y: -0.0006306095, z: 0.000033289536, w: 0.99936676}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: Finger4End.R
+      parentName: Finger4Mid.R
+      position: {x: 6.3417244e-10, y: 0.006406886, z: 4.656613e-10}
+      rotation: {x: -0.027002197, y: 0.00088921975, z: 0.0032580143, w: 0.9996297}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Finger4End.R_end
+      parentName: Finger4End.R
+      position: {x: -0, y: 0.004928219, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ThumbStart.R
+      parentName: Wrist.R
+      position: {x: 0.009427762, y: 0.009609301, z: -0.0046570194}
+      rotation: {x: -0.33200097, y: -0.6199949, z: 0.31347135, w: 0.63805753}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: ThumbMid.R
+      parentName: ThumbStart.R
+      position: {x: 7.4505804e-11, y: 0.0062299166, z: -3.8184225e-10}
+      rotation: {x: 0.08841927, y: 0.70037276, z: -0.090038, w: 0.7025334}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: ThumbEnd.R
+      parentName: ThumbMid.R
+      position: {x: 2.5145708e-10, y: 0.006768583, z: 1.11758706e-10}
+      rotation: {x: 0.13069913, y: -0.0012272736, z: -0.0015488012, w: 0.99142015}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: ThumbEnd.R_end
+      parentName: ThumbEnd.R
+      position: {x: -0, y: 0.0049568363, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
