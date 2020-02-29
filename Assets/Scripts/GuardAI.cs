@@ -9,7 +9,7 @@ public class GuardAI : MonoBehaviour
     public Vector3 lastTargetPosition;
     public Transform player;
 
-    public static bool lightsOff;
+    public bool lightsOff;
 
     public Vector3 startPosition;
 
@@ -25,14 +25,19 @@ public class GuardAI : MonoBehaviour
 
     void Update()
     {
-        if(lightsOff)
+        foreach(GameObject g in CommandHandler.lightList.Values)
         {
-            if(!agent.isStopped)
+            if (!Physics.Raycast(transform.position, g.transform.position - transform.position, out RaycastHit lightHit, spottingRange))
             {
-                agent.isStopped = true;
+                lightsOff = false;
+                break;
+            }
+            else
+            {
+                lightsOff = true;
             }
         }
-        else
+        if(!lightsOff)
         {
             if (Physics.Raycast(transform.position, player.position - transform.position, out RaycastHit hit, spottingRange))
             {
@@ -57,5 +62,21 @@ public class GuardAI : MonoBehaviour
             }
             agent.destination = currentTarget;
         }
+    }
+
+    GameObject GetClosestLight()
+    {
+        GameObject closestObject = null;
+        float closestDist = Mathf.Infinity;
+        foreach(var g in CommandHandler.lightList.Values)
+        {
+            float dist = Vector3.Distance(g.transform.position, transform.position);
+            if (dist < closestDist)
+            {
+                closestDist = dist;
+                closestObject = g;
+            }
+        }
+        return closestObject;
     }
 }
