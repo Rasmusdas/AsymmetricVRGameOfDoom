@@ -9,7 +9,7 @@ public class ExitLevel : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            if (DuffelbagManager.HasTakenGold || true)
+            if (DuffelbagManager.HasTakenGold)
             {
                 EndGame();
             }
