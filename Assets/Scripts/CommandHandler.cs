@@ -222,8 +222,9 @@ public class CommandHandler : MonoBehaviour
                 if(vaultdoor.name == input)
                 {
                     overrideDone = true;
-                    console.WriteLine(string.Format("Security override complete. Vault door unlocked."));
-                    console.WriteLine("Type open.vaultdoor to open the vault door");
+                    console.WriteLine(string.Format("Security override complete."));
+                    console.WriteLine("Turn the Vault Door wheel clockwise until it stops");
+                    console.WriteLine("then type open.vaultdoor to open the vault door");
                 }
                 else if(input.Length != 0)
                 {

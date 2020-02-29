@@ -128,16 +128,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4866822419724986657, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+    - target: {fileID: 4866822419604247858, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
-      propertyPath: cameras.Array.size
-      value: 3
+      propertyPath: m_Name
+      value: Header
       objectReference: {fileID: 0}
     - target: {fileID: 4866822419724986657, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
-      propertyPath: doors.Array.size
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: vaultdoor
+      value: 
+      objectReference: {fileID: 8728334952713412378}
     - target: {fileID: 4866822419724986657, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
       propertyPath: cameras.Array.data[0]
@@ -163,11 +163,6 @@ PrefabInstance:
       propertyPath: doors.Array.data[1]
       value: 
       objectReference: {fileID: 1200004596}
-    - target: {fileID: 4866822419724986657, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
-        type: 3}
-      propertyPath: vaultdoor
-      value: 
-      objectReference: {fileID: 8728334952713412378}
     - target: {fileID: 4866822421053416788, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
       propertyPath: m_Name
@@ -277,6 +272,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[1].tips.Array.data[1]
+      value: Use open.[DOORID] to unlock doors.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[1].tips.Array.data[2]
+      value: Use the override.[VAULTID] command to unlock the vault door
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[1].tips.Array.data[0]
+      value: Use hack.[CAMERAID] to control a camera.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[0].tips.Array.data[1]
+      value: Use the up/down arrow keys to change tips or use the buttons.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b08cdc4795d6d19469827d4ab1f7ad9a, type: 3}
@@ -3162,6 +3177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: vaultdoor
       objectReference: {fileID: 0}
+    - target: {fileID: 5743496361733971643, guid: 6e4470c432cf046479ed2a8a60810084,
+        type: 3}
+      propertyPath: clipboard
+      value: 
+      objectReference: {fileID: 1520457470}
     - target: {fileID: 8353910305547879043, guid: 6e4470c432cf046479ed2a8a60810084,
         type: 3}
       propertyPath: m_LocalPosition.x

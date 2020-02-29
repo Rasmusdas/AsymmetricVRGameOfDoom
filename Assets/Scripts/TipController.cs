@@ -61,7 +61,7 @@ public class TipController : MonoBehaviour
 
     void updateText()
     {
-        hedderText.text = tipList[currentTip].hedder;
+        hedderText.text = tipList[currentTip].header;
         string temp = "";
         for (int i = 0; i < tipList[currentTip].tips.Count; i++)
         {
@@ -74,6 +74,6 @@ public class TipController : MonoBehaviour
 [Serializable]
 public class Tip
 {
-    public string hedder;
+    public string header;
     public List<string> tips;
 }
