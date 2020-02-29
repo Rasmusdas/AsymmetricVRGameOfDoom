@@ -12,6 +12,7 @@ public class playerControler : MonoBehaviour
     private float currentSpeed;
     public Transform head;
     CharacterController charCon;
+    private Vector3 dir;
 
     private void Start()
     {
@@ -25,7 +26,15 @@ public class playerControler : MonoBehaviour
         {
             currentSpeed += speed;
         }
-        Vector3 dir = Player.instance.hmdTransform.TransformDirection(new Vector3(input.axis.x,0,input.axis.y));
-        charCon.Move(Time.deltaTime*speed*Vector3.ProjectOnPlane(dir,Vector3.up));
+        else
+        {
+            currentSpeed = speed;
+        
+        }
+        dir = Player.instance.hmdTransform.TransformDirection(new Vector3(input.axis.x, 0, input.axis.y));
+    }
+    private void FixedUpdate()
+    {
+        charCon.Move(Time.deltaTime * currentSpeed * Vector3.ProjectOnPlane(dir, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
     }
 }
