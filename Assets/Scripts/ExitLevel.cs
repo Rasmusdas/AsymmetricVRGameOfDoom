@@ -18,6 +18,7 @@ public class ExitLevel : MonoBehaviour
 
     public void EndGame()
     {
+        LevelManager.LastLevel = SceneManager.GetActiveScene();
         SceneManager.LoadScene("EndScene");
     }
 }
