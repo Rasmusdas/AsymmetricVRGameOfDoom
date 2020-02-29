@@ -9,7 +9,7 @@ public class GuardAI : MonoBehaviour
     public Vector3 lastTargetPosition;
     public Transform player;
 
-    public static bool lightsOff;
+    public bool lightsOff;
 
     public Vector3 startPosition;
 
@@ -20,23 +20,34 @@ public class GuardAI : MonoBehaviour
     private void Start()
     {
         startPosition = transform.position;
+        lastTargetPosition = startPosition;
         agent = GetComponent<NavMeshAgent>();
     }
 
     void Update()
     {
-        if(lightsOff)
+        foreach(GameObject g in CommandHandler.lightList.Values)
         {
-            if(!agent.isStopped)
+            if(g.GetComponent<Light>().enabled)
             {
-                agent.isStopped = true;
+                if (!Physics.Raycast(transform.position, g.transform.position - transform.position, out RaycastHit lightHit, Vector3.Distance(transform.position,g.transform.position)))
+                {
+                    Debug.Log("Found light source!");
+                    lightsOff = false;
+                    break;
+                }
+                else
+                {
+                    Debug.Log("Blocked Source");
+                    lightsOff = true;
+                }
             }
         }
-        else
+        if(!lightsOff)
         {
             if (Physics.Raycast(transform.position, player.position - transform.position, out RaycastHit hit, spottingRange))
             {
-                Debug.Log(hit.transform.tag);
+                Debug.Log(hit.transform.name);
                 if (hit.transform.tag == "Player")
                 {
                     currentTarget = hit.transform.position;
@@ -47,7 +58,6 @@ public class GuardAI : MonoBehaviour
             }
             if (Vector3.Distance(lastTargetPosition, transform.position) > 1f)
             {
-                Debug.Log(Vector3.Distance(lastTargetPosition, transform.position));
                 currentTarget = lastTargetPosition;
             }
             else
@@ -57,5 +67,25 @@ public class GuardAI : MonoBehaviour
             }
             agent.destination = currentTarget;
         }
+        else
+        {
+            agent.ResetPath();
+        }
+    }
+
+    GameObject GetClosestLight()
+    {
+        GameObject closestObject = null;
+        float closestDist = Mathf.Infinity;
+        foreach(var g in CommandHandler.lightList.Values)
+        {
+            float dist = Vector3.Distance(g.transform.position, transform.position);
+            if (dist < closestDist)
+            {
+                closestDist = dist;
+                closestObject = g;
+            }
+        }
+        return closestObject;
     }
 }

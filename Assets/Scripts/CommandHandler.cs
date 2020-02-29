@@ -6,27 +6,38 @@ public class CommandHandler : MonoBehaviour
 {
     public static Dictionary<string, Camera> cameraList = new Dictionary<string, Camera>();
     public static Dictionary<string, Door> doorList = new Dictionary<string, Door>();
+    public static Dictionary<string, GameObject> lightList = new Dictionary<string, GameObject>();
 
     public Camera currentCam;
     public RenderTexture roofCamera;
     public ConsoleScreen console;
 
     public float lightMeter;
-    public float rechargeSpeed;
-    public float drainSpeed;
-
-    private bool lights;
+    public float lightTimer;
 
     [SerializeField]
     private Camera[] cameras;
 
+    [SerializeField]
+    private Door[] doors;
+
+    [SerializeField]
+    private GameObject[] lights;
+
     private void Awake()
     {
-        StartCoroutine(HandleLights());
         currentCam = Camera.current;
-        foreach(Camera cam in cameras)
+        foreach (Camera cam in cameras)
         {
             AddCamera(cam);
+        }
+        foreach (Door door in doors)
+        {
+            AddDoor(door);
+        }
+        foreach (GameObject light in lights)
+        {
+            AddLight(light);
         }
     }
 
@@ -53,9 +64,21 @@ public class CommandHandler : MonoBehaviour
             cameraList.Add(cam.name.ToLower(), cam);
         }
     }
-    public static void AddDoor(GameObject door)
-    {
 
+    public static void AddDoor(Door door)
+    {
+        if (!doorList.ContainsKey(door.name.ToLower()))
+        {
+            doorList.Add(door.name.ToLower(), door);
+        }
+    }
+
+    public static void AddLight(GameObject light)
+    {
+        if (!lightList.ContainsKey(light.name.ToLower()))
+        {
+            lightList.Add(light.name.ToLower(), light);
+        }
     }
 
     public void SwapCamera(Camera cam)
@@ -70,6 +93,16 @@ public class CommandHandler : MonoBehaviour
     public void UnlockDoor(Door door)
     {
         door.locked = false;
+    }
+
+    public void ChangeLightState(GameObject lightObject)
+    {
+        Light light = lightObject.GetComponent<Light>();
+        if (lightList.ContainsKey(light.name.ToLower()))
+        {
+            light.GetComponent<Light>().enabled = false;
+            StartCoroutine(RelightLights(light));
+        }   
     }
 
     public void HandleCommand(string s)
@@ -93,7 +126,7 @@ public class CommandHandler : MonoBehaviour
                 }
                 else if(input.Length != 0)
                 {
-                    console.WriteLine(string.Format("Camera \"{0}\" could not be found or is unavailable", input));
+                    console.WriteLine(string.Format("\"{0}\" could not be found or is unavailable", input));
                 }
                 else
                 {
@@ -108,28 +141,26 @@ public class CommandHandler : MonoBehaviour
                 }
                 else if(input.Length != 0)
                 {
-                    console.WriteLine(string.Format("Door \"{0}\" could not be found or is unavailable",input));
+                    console.WriteLine(string.Format("\"{0}\" could not be found or is unavailable",input));
                 }
                 else
                 {
                     console.WriteLine("Missing argument. Correct syntax: open.[arg]");
                 }
                 break;
-            case "lights":
-                if(input == "off" && lightMeter > 0)
+            case "turnoff":
+                if (lightList.ContainsKey(input))
                 {
-                    lights = false;
-                    console.WriteLine("Lights have been turned off");
+                    console.WriteLine(string.Format("Turned off \"{0}\"", input));
+                    ChangeLightState(lightList[input]);
                 }
-                else if(input == "on")
+                else if(input.Length != 0)
                 {
-                    lights = true;
-                    GuardAI.lightsOff = true;
-                    console.WriteLine("Lights have been turned on");
+                    console.WriteLine(string.Format("\"{0}\" could not be found or is unavailable", input));
                 }
                 else
                 {
-                    console.WriteLine("Missing argument. Correct syntax: lights.on or lights.off");
+                    console.WriteLine("Missing argument, Correct syntax: turnoff.[arg]");
                 }
                 break;
             default:
@@ -138,22 +169,9 @@ public class CommandHandler : MonoBehaviour
         }
     }
 
-    IEnumerator HandleLights()
+    IEnumerator RelightLights(Light light)
     {
-        if(lights && lightMeter < 100)
-        {
-            lightMeter += rechargeSpeed;
-        }
-        else if(!lights && lightMeter > 0)
-        {
-            lightMeter += drainSpeed;
-        }
-        else
-        {
-            GuardAI.lightsOff = false;
-            lights = false;
-        }
-        yield return new WaitForSeconds(0.1f);
-        StartCoroutine(HandleLights());
+        yield return new WaitForSeconds(lightTimer);
+        light.enabled = true;
     }
 }

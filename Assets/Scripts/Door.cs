@@ -12,7 +12,7 @@ public class Door : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.centerOfMass = rb.centerOfMass - new Vector3(0, 0, 1f);
+        rb.centerOfMass = rb.centerOfMass - new Vector3(0, 0, -0.95f);
         startAngle = transform.eulerAngles;
     }
 
