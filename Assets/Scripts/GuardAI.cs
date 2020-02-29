@@ -20,6 +20,7 @@ public class GuardAI : MonoBehaviour
     private void Start()
     {
         startPosition = transform.position;
+        lastTargetPosition = startPosition;
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -27,21 +28,26 @@ public class GuardAI : MonoBehaviour
     {
         foreach(GameObject g in CommandHandler.lightList.Values)
         {
-            if (!Physics.Raycast(transform.position, g.transform.position - transform.position, out RaycastHit lightHit, spottingRange))
+            if(g.GetComponent<Light>().enabled)
             {
-                lightsOff = false;
-                break;
-            }
-            else
-            {
-                lightsOff = true;
+                if (!Physics.Raycast(transform.position, g.transform.position - transform.position, out RaycastHit lightHit, Vector3.Distance(transform.position,g.transform.position)))
+                {
+                    Debug.Log("Found light source!");
+                    lightsOff = false;
+                    break;
+                }
+                else
+                {
+                    Debug.Log("Blocked Source");
+                    lightsOff = true;
+                }
             }
         }
         if(!lightsOff)
         {
             if (Physics.Raycast(transform.position, player.position - transform.position, out RaycastHit hit, spottingRange))
             {
-                Debug.Log(hit.transform.tag);
+                Debug.Log(hit.transform.name);
                 if (hit.transform.tag == "Player")
                 {
                     currentTarget = hit.transform.position;
@@ -52,7 +58,6 @@ public class GuardAI : MonoBehaviour
             }
             if (Vector3.Distance(lastTargetPosition, transform.position) > 1f)
             {
-                Debug.Log(Vector3.Distance(lastTargetPosition, transform.position));
                 currentTarget = lastTargetPosition;
             }
             else
@@ -61,6 +66,10 @@ public class GuardAI : MonoBehaviour
                 currentTarget = startPosition;
             }
             agent.destination = currentTarget;
+        }
+        else
+        {
+            agent.ResetPath();
         }
     }
 

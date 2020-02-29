@@ -15,17 +15,29 @@ public class CommandHandler : MonoBehaviour
     public float lightMeter;
     public float lightTimer;
 
-    private bool lights;
-
     [SerializeField]
     private Camera[] cameras;
+
+    [SerializeField]
+    private Door[] doors;
+
+    [SerializeField]
+    private GameObject[] lights;
 
     private void Awake()
     {
         currentCam = Camera.current;
-        foreach(Camera cam in cameras)
+        foreach (Camera cam in cameras)
         {
             AddCamera(cam);
+        }
+        foreach (Door door in doors)
+        {
+            AddDoor(door);
+        }
+        foreach (GameObject light in lights)
+        {
+            AddLight(light);
         }
     }
 
