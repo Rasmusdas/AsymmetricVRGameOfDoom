@@ -10,9 +10,16 @@ public class VaultDoor : MonoBehaviour
     Vector3 wheelStart;
     public Door door;
     public Vector3 rotationEnd;
+    public TextMesh clipboard;
+
+    private void Awake()
+    {
+        name = "vault" + Random.Range(1000, 9999);    
+    }
 
     private void Start()
     {
+        clipboard.text = "vault\n" + name.Substring(5); 
         rb = GetComponent<Rigidbody>();
         start = door.transform.localPosition;
         wheelStart = transform.localPosition;

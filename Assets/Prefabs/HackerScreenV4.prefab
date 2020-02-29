@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4866822419604247857}
   - component: {fileID: 4866822419604247856}
   m_Layer: 5
-  m_Name: Hedder
+  m_Name: Header
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,9 +134,15 @@ MonoBehaviour:
   console: {fileID: 4866822421428842986}
   lightMeter: 0
   lightTimer: 0
+  vaultdoor: {fileID: 0}
+  overrideDone: 0
   cameras:
   - {fileID: 0}
-  doors: []
+  - {fileID: 0}
+  - {fileID: 0}
+  doors:
+  - {fileID: 0}
+  - {fileID: 0}
   lights: []
 --- !u!1 &4866822419840696826
 GameObject:
@@ -1696,7 +1702,7 @@ GameObject:
   - component: {fileID: 4866822421053416794}
   - component: {fileID: 4866822421053416789}
   m_Layer: 5
-  m_Name: Main Screen
+  m_Name: HackerScreenV4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2228,16 +2234,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipPosition: {fileID: 4866822420469726040}
   tipList:
-  - hedder: General Tips
+  - header: 
     tips:
     - Use the Console to execute commands
-    - "Use the up/down arrow key\xB4s to change tips. Or use the buttons."
-  - hedder: Hacking Tips
+    - Use the up/down arrow keys to change tips or use the buttons.
+  - header: 
     tips:
-    - Use hack.camera(id) to control a camera.
-    - Use open.door(id) to open and close doors.
-    - Use lights.off command to turn the lights off/on.
-  - hedder: Camera Tips
+    - Use hack.[CAMERAID] to control a camera.
+    - Use open.[DOORID] to unlock doors.
+    - Use the override.[VAULTID] command to unlock the vault door
+  - header: 
     tips:
     - Rotate the cameras using the arrow keys.
     - Relay the vital info!
