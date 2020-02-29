@@ -138,6 +138,16 @@ public class CommandHandler : MonoBehaviour
         door.locked = false;
     }
 
+    public IEnumerator LockDoor(Door door)
+    {
+        door.locked = true;
+        while(!Mathf.Approximately(door.transform.localEulerAngles.y, door.startAngle.y))
+        {
+            door.transform.rotation = Quaternion.RotateTowards(door.transform.rotation,Quaternion.Euler(door.startAngle),3);
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
     public void ChangeLightState(GameObject lightObject)
     {
         Light light = lightObject.GetComponent<Light>();
@@ -201,6 +211,21 @@ public class CommandHandler : MonoBehaviour
                 else
                 {
                     console.WriteLine("Missing argument. Correct syntax: open.[arg]");
+                }
+                break;
+            case "close":
+                if (doorList.ContainsKey(input))
+                {
+                    console.WriteLine(string.Format("Locked door \"{0}\"", input));
+                    StartCoroutine(LockDoor(doorList[input]));
+                }
+                else if (input.Length != 0)
+                {
+                    console.WriteLine(string.Format("\"{0}\" could not be found or is unavailable", input));
+                }
+                else
+                {
+                    console.WriteLine("Missing argument. Correct syntax: close.[arg]");
                 }
                 break;
             case "turnoff":
