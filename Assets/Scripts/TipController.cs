@@ -20,33 +20,43 @@ public class TipController : MonoBehaviour
         updateText();
     }  
 
-// Update is called once per frame
-void Update()
+    // Update is called once per frame
+    void Update()
     {
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            if (currentTip < tipList.Count-1)
-            {
-                currentTip++;
-            }
-            else
-            {
-                currentTip = 0;
-            }
-            updateText();
+            MoveUp();
         }
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
-            if (currentTip > 0)
-            {
-                currentTip--;
-            }
-            else
-            {
-                currentTip = tipList.Count-1;
-            }
-            updateText();
+            MoveDown();
         }
+    }
+
+    public void MoveUp()
+    {
+        if (currentTip < tipList.Count - 1)
+        {
+            currentTip++;
+        }
+        else
+        {
+            currentTip = 0;
+        }
+        updateText();
+    }
+
+    public void MoveDown()
+    {
+        if (currentTip > 0)
+        {
+            currentTip--;
+        }
+        else
+        {
+            currentTip = tipList.Count - 1;
+        }
+        updateText();
     }
 
     void updateText()
