@@ -121,6 +121,22 @@ namespace Valve.VR
             }
         }
         
+        public virtual SteamVR_Action_Boolean GrabLeft
+        {
+            get
+            {
+                return SteamVR_Actions.default_GrabLeft;
+            }
+        }
+        
+        public virtual SteamVR_Action_Boolean GarbRight
+        {
+            get
+            {
+                return SteamVR_Actions.default_GarbRight;
+            }
+        }
+        
         public virtual SteamVR_Action_Vibration Haptic
         {
             get

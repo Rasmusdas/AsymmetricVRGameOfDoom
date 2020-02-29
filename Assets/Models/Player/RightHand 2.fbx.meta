@@ -70,7 +70,7 @@ ModelImporter:
       name: grab
       takeName: RightHandRig|RightHandRigAction
       internalID: 0
-      firstFrame: 9
+      firstFrame: 8.9
       lastFrame: 9
       wrapMode: 0
       orientationOffsetY: 0

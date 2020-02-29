@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5996001611362013498}
+  - component: {fileID: 316151322}
   m_Layer: 0
   m_Name: RHandRig
   m_TagString: Untagged
@@ -31,6 +32,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &316151322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143589812891559758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bd1367fbcd75984e90e4aa5d6347d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grab:
+    actionPath: /actions/default/in/GrabGrip
+    needsReinit: 0
+  ainm: {fileID: 8838181900025646192}
 --- !u!1001 &5861206850864531984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,13 +63,18 @@ PrefabInstance:
     - target: {fileID: -8287868058603992339, guid: c2e471b8b954bda498cb444cf00b0056,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.47
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8287868058603992339, guid: c2e471b8b954bda498cb444cf00b0056,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.96
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: c2e471b8b954bda498cb444cf00b0056,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 836999c246ab8824fb484577e6a847f3, type: 2}
     - target: {fileID: -4216859302048453862, guid: c2e471b8b954bda498cb444cf00b0056,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -148,6 +170,12 @@ PrefabInstance:
 --- !u!4 &1453963790436819210 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: c2e471b8b954bda498cb444cf00b0056,
+    type: 3}
+  m_PrefabInstance: {fileID: 5861206850864531984}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &8838181900025646192 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: -6057140222963153312, guid: c2e471b8b954bda498cb444cf00b0056,
     type: 3}
   m_PrefabInstance: {fileID: 5861206850864531984}
   m_PrefabAsset: {fileID: 0}
