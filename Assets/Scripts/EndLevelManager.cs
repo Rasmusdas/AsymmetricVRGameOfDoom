@@ -17,8 +17,14 @@ public class EndLevelManager : MonoBehaviour
         }
     }
 
-    void GoToMainMenu()
+    public void GoToMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void NextLevel()
+    {
+        int.TryParse(LevelManager.LastLevel.name.Split('_')[1], out int number);
+        SceneManager.LoadScene("Level " + number);
     }
 }
