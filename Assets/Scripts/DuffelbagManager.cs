@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DuffelbagManager : MonoBehaviour
 {
-    public bool HasTakenGold { get { return take > 0; } }
-    public float take;
+    public static bool HasTakenGold { get { return take > 0; } }
+    public static float take;
     public float maxWorth;
     public float minWorth;
 
