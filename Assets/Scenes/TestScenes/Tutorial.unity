@@ -415,15 +415,9 @@ PrefabInstance:
         type: 3}
       propertyPath: survCam
       value: 
-      objectReference: {fileID: 215763014}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 844885ae3b2ad924cbb606b810e170fc, type: 3}
---- !u!20 &215763014 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3778245128066374532, guid: 844885ae3b2ad924cbb606b810e170fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 215763013}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &334285090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1337,7 +1331,7 @@ PrefabInstance:
         type: 3}
       propertyPath: survCam
       value: 
-      objectReference: {fileID: 1758571598}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 844885ae3b2ad924cbb606b810e170fc, type: 3}
 --- !u!1 &1018759911
@@ -2113,12 +2107,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!20 &1525549333 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3778245128066374532, guid: 844885ae3b2ad924cbb606b810e170fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 2110642333}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1601819002
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2260,12 +2248,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.8, z: 0}
---- !u!20 &1758571598 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 3778245128066374532, guid: 844885ae3b2ad924cbb606b810e170fc,
-    type: 3}
-  m_PrefabInstance: {fileID: 872826543}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1808501554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2639,6 +2621,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1245060149, guid: 844885ae3b2ad924cbb606b810e170fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2035523705, guid: 844885ae3b2ad924cbb606b810e170fc, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2758,11 +2744,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7837201420846939137, guid: 844885ae3b2ad924cbb606b810e170fc,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7949516485419797043, guid: 844885ae3b2ad924cbb606b810e170fc,
         type: 3}
       propertyPath: survCam
       value: 
-      objectReference: {fileID: 1525549333}
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5180524524295565801, guid: 844885ae3b2ad924cbb606b810e170fc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 844885ae3b2ad924cbb606b810e170fc, type: 3}
