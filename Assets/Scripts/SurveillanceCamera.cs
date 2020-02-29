@@ -11,7 +11,7 @@ public class SurveillanceCamera : MonoBehaviour
     public TextMesh text;
     public Camera survCam;
 
-    private void Awake()
+    private void Start()
     {
         angle = transform.rotation.eulerAngles;
         text.text = name;
