@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
     protected Rigidbody rb;
     public Vector3 startAngle;
     public Vector3 pivot;
+    public bool ignoreRotate = false;
 
     private void Start()
     {
@@ -19,14 +20,18 @@ public class Door : MonoBehaviour
 
     public virtual void Update()
     {
-        transform.localRotation = new Quaternion(0, Mathf.Clamp(transform.localRotation.y, -0.75f, 0.75f), 0, transform.localRotation.w);
-        if (locked)
+       
+        if(!ignoreRotate)
         {
-            rb.constraints = RigidbodyConstraints.FreezeAll;
-        }
-        else
-        {
-            rb.constraints = (RigidbodyConstraints)94;
+            transform.localRotation = new Quaternion(0, Mathf.Clamp(transform.localRotation.y, -0.75f, 0.75f), 0, transform.localRotation.w);
+            if (locked)
+            {
+                rb.constraints = RigidbodyConstraints.FreezeAll;
+            }
+            else
+            {
+                rb.constraints = (RigidbodyConstraints)94;
+            }
         }
     }
 }

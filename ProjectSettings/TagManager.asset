@@ -7,6 +7,9 @@ TagManager:
   - projectile
   - FxTemporaire
   - GoldBar
+  - GameLights
+  - Door
+  - SurvCam
   layers:
   - Default
   - TransparentFX
@@ -19,8 +22,8 @@ TagManager:
   - Player
   - VRIgnore
   - Vaultdoor
-  - 
-  - 
+  - Doors
+  - NeutronStarDoorStopper
   - 
   - 
   - 

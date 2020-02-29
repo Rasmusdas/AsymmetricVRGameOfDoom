@@ -88,8 +88,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72133aba96c980a4bae0c5a4d330cd4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxWorth: 1
-  minWorth: 20
+  maxWorth: 10000
+  minWorth: 1
 --- !u!1 &6896139301041995879
 GameObject:
   m_ObjectHideFlags: 0
