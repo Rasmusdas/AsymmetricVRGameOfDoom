@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cameras : MonoBehaviour
+public class CommandHandler : MonoBehaviour
 {
     public static Dictionary<string, Camera> cameraList = new Dictionary<string, Camera>();
-    public static Dictionary<string, Camera> doorList = new Dictionary<string, Camera>();
+    public static Dictionary<string, Door> doorList = new Dictionary<string, Door>();
 
     public Camera currentCam;
     public RenderTexture roofCamera;
@@ -60,6 +60,11 @@ public class Cameras : MonoBehaviour
         }
     }
 
+    public void UnlockDoor(Door door)
+    {
+        door.locked = false;
+    }
+
     public void HandleCommand(string s)
     {
         if (s.Length == 0) return;
@@ -81,14 +86,27 @@ public class Cameras : MonoBehaviour
                 }
                 else if(input.Length != 0)
                 {
-                    console.WriteLine(string.Format("Camera \"{0}\" could not found or is unavailable", input));
+                    console.WriteLine(string.Format("Camera \"{0}\" could not be found or is unavailable", input));
                 }
                 else
                 {
-                    console.WriteLine("Argument missing, hack.[arg]");
+                    console.WriteLine("Missing argument, Correct syntax: hack.[arg]");
                 }
                 break;
             case "open":
+                if(doorList.ContainsKey(input))
+                {
+                    console.WriteLine(string.Format("Unlocked door \"{0}\"",input));
+                    UnlockDoor(doorList[input]);
+                }
+                else if(input.Length != 0)
+                {
+                    console.WriteLine(string.Format("Door \"{0}\" could not be found or is unavailable",input));
+                }
+                else
+                {
+                    console.WriteLine("Missing argument. Correct syntax: open.[arg]");
+                }
                 break;
             default:
                 console.WriteLine(string.Format("\"{0}\" is not a recognized command",s));
