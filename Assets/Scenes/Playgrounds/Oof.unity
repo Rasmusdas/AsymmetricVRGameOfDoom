@@ -772,16 +772,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2035523703, guid: 844885ae3b2ad924cbb606b810e170fc, type: 3}
-      propertyPath: m_CharacterSize
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2035523703, guid: 844885ae3b2ad924cbb606b810e170fc, type: 3}
-      propertyPath: m_Text
-      value: '
-
-'
-      objectReference: {fileID: 0}
     - target: {fileID: 5915376111577173457, guid: 844885ae3b2ad924cbb606b810e170fc,
         type: 3}
       propertyPath: m_Name
