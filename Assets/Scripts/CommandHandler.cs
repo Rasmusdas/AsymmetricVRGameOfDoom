@@ -15,6 +15,9 @@ public class CommandHandler : MonoBehaviour
     public float lightMeter;
     public float lightTimer;
 
+    public VaultDoor vaultdoor;
+    public static bool vaultOpen;
+
     [SerializeField]
     private GameObject[] cameras;
 
@@ -133,7 +136,19 @@ public class CommandHandler : MonoBehaviour
                 }
                 break;
             case "open":
-                if(doorList.ContainsKey(input))
+                if(input == "vaultdoor")
+                {
+                    if(vaultOpen)
+                    {
+                        StartCoroutine(OpenVaultDoor());
+                        console.WriteLine("Vault door opened");
+                    }
+                    else
+                    {
+                        console.WriteLine(string.Format("Vault door is locked"));
+                    }
+                }
+                else if(doorList.ContainsKey(input))
                 {
                     console.WriteLine(string.Format("Unlocked door \"{0}\"",input));
                     UnlockDoor(doorList[input]);
@@ -162,6 +177,21 @@ public class CommandHandler : MonoBehaviour
                     console.WriteLine("Missing argument, Correct syntax: turnoff.[arg]");
                 }
                 break;
+            case "override":
+                if(vaultdoor.name == input)
+                {
+                    console.WriteLine(string.Format("Security override complete. Vault door unlocked."));
+                    console.WriteLine("Type open.vaultdoor to open the vault door");
+                }
+                else if(input.Length != 0)
+                {
+                    console.WriteLine(string.Format("Could not override \"{0}\"", input));
+                }
+                else
+                {
+                    console.WriteLine("Missing argument, Correct syntax: turnoff.[arg]");
+                }
+                break;
             default:
                 console.WriteLine(string.Format("\"{0}\" is not a recognized command",s));
                 break;
@@ -172,5 +202,12 @@ public class CommandHandler : MonoBehaviour
     {
         yield return new WaitForSeconds(lightTimer);
         light.enabled = true;
+    }
+
+    IEnumerator OpenVaultDoor()
+    {
+        yield return new WaitForEndOfFrame();
+        vaultdoor.door.transform.localRotation = Quaternion.RotateTowards(vaultdoor.door.transform.localRotation, Quaternion.Euler(vaultdoor.rotationEnd), 1f);
+        StartCoroutine(OpenVaultDoor());
     }
 }
