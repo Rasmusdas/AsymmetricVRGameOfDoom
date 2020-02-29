@@ -3221,13 +3221,12 @@ MonoBehaviour:
   - hedder: General Tips
     tips:
     - Use the Console to execute commands
-    - "Use the up/down arrow key\xB4s to change tips."
+    - "Use the up/down arrow key\xB4s to change tips. Or use the buttons."
   - hedder: Hacking Tips
     tips:
-    - Use the hack command to acces a camera.
-    - Use the open command to open and close doors.
-    - Use the lights command to turn the lights off/on.
-    - Use "." to specify the thing you want to manipulate.
+    - Use hack.camera(id) to control a camera.
+    - Use open.door(id) to open and close doors.
+    - Use lights.off command to turn the lights off/on.
   - hedder: Camera Tips
     tips:
     - Rotate the cameras using the arrow keys.
