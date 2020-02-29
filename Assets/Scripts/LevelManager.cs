@@ -5,5 +5,5 @@ using UnityEngine.SceneManagement;
 
 public static class LevelManager
 {
-    public static Scene LastLevel { get; set; }
+    public static string LastLevel;
 }

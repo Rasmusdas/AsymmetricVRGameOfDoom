@@ -561,11 +561,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 31546302734315005, guid: c9d82bf20b45f6f4381eb001edf17c52,
-        type: 3}
-      propertyPath: attachmentFlags
-      value: 84
-      objectReference: {fileID: 0}
     - target: {fileID: 4974973454088210149, guid: c9d82bf20b45f6f4381eb001edf17c52,
         type: 3}
       propertyPath: m_LocalPosition.x

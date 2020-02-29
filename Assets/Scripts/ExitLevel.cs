@@ -11,6 +11,7 @@ public class ExitLevel : MonoBehaviour
         {
             if (DuffelbagManager.HasTakenGold)
             {
+                Debug.Log("endgame");
                 EndGame();
             }
         }
@@ -18,7 +19,7 @@ public class ExitLevel : MonoBehaviour
 
     public void EndGame()
     {
-        LevelManager.LastLevel = SceneManager.GetActiveScene();
+        LevelManager.LastLevel = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("EndScene");
     }
 }
