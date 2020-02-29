@@ -30,6 +30,14 @@ public class CommandHandler : MonoBehaviour
 
     private void Awake()
     {
+        cameras = GameObject.FindGameObjectsWithTag("SurvCam");
+        GameObject[] tempDoors = GameObject.FindGameObjectsWithTag("Door");
+        doors = new Door[tempDoors.Length];
+        for (int i = 0; i < tempDoors.Length; i++)
+        {
+            doors[i] = tempDoors[i].GetComponent<Door>();
+        }
+        lights = GameObject.FindGameObjectsWithTag("GameLight");
         List<int> taken = new List<int>();
         foreach (GameObject cam in cameras)
         {
