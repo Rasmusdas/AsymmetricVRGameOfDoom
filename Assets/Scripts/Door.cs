@@ -7,14 +7,14 @@ public class Door : MonoBehaviour
 {
     public bool locked;
     protected Rigidbody rb;
-    Vector3 startAngle;
+    public Vector3 startAngle;
     public Vector3 pivot;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.centerOfMass = rb.centerOfMass - pivot;
-        startAngle = transform.eulerAngles;
+        startAngle = transform.localEulerAngles;
     }
 
     public virtual void Update()

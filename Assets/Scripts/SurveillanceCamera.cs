@@ -10,10 +10,11 @@ public class SurveillanceCamera : MonoBehaviour
     public Vector3 angle;
     public TextMesh text;
     public Camera survCam;
+    public Transform camPivot;
 
     private void Start()
     {
-        angle = transform.rotation.eulerAngles;
+        angle = camPivot.rotation.eulerAngles;
         text.text = name;
     }
 
@@ -24,7 +25,7 @@ public class SurveillanceCamera : MonoBehaviour
             if(currentChange > -maxDeltaAngle)
             {
                 currentChange -= 0.2f;
-                transform.Rotate(0, -0.2f, 0, Space.World);
+                camPivot.Rotate(0, -0.2f, 0, Space.World);
             }
         }
         if (Input.GetKey(KeyCode.RightArrow))
@@ -32,7 +33,7 @@ public class SurveillanceCamera : MonoBehaviour
             if (currentChange < maxDeltaAngle) 
             {
                 currentChange += 0.2f;
-                transform.Rotate(0, 0.2f, 0, Space.World);
+                camPivot.Rotate(0, 0.2f, 0, Space.World);
             }
         }
     }

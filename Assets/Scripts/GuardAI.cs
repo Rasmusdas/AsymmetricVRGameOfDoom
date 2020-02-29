@@ -30,7 +30,7 @@ public class GuardAI : MonoBehaviour
         {
             if(g.GetComponent<Light>().enabled)
             {
-                if (!Physics.Raycast(transform.position, g.transform.position - transform.position, out RaycastHit lightHit, Vector3.Distance(transform.position,g.transform.position)))
+                if (!Physics.Raycast(player.position, g.transform.position - transform.position, out RaycastHit lightHit, Vector3.Distance(player.position,g.transform.position)))
                 {
                     Debug.Log("Found light source!");
                     lightsOff = false;
@@ -45,9 +45,10 @@ public class GuardAI : MonoBehaviour
         }
         if(!lightsOff)
         {
-            if (Physics.Raycast(transform.position, player.position - transform.position, out RaycastHit hit, spottingRange))
+            Debug.DrawLine(transform.position, (player.position - transform.position)+transform.position);
+            if (Physics.Raycast(transform.position, player.position+Vector3.up/2 - transform.position, out RaycastHit hit, spottingRange))
             {
-                Debug.Log(hit.transform.name);
+                Debug.Log(hit.transform.tag);
                 if (hit.transform.tag == "Player")
                 {
                     currentTarget = hit.transform.position;
