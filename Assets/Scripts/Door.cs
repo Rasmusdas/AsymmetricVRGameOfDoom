@@ -19,6 +19,7 @@ public class Door : MonoBehaviour
 
     public virtual void Update()
     {
+        transform.localRotation = new Quaternion(0, Mathf.Clamp(transform.localRotation.y, -0.75f, 0.75f), 0, transform.localRotation.w);
         if (locked)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
