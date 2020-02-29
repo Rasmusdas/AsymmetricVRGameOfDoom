@@ -8,10 +8,12 @@ public class SurveillanceCamera : MonoBehaviour
     public float currentChange = 0;
     public float angleChange = 0.1f;
     public Vector3 angle;
+    public TextMesh text;
 
     private void Awake()
     {
         angle = transform.rotation.eulerAngles;
+        text.text = name;
     }
 
     public void ChangeRotation(bool left)
