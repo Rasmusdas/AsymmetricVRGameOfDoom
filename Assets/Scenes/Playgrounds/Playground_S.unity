@@ -595,6 +595,7 @@ MonoBehaviour:
   lightMeter: 0
   lightTimer: 0
   vaultdoor: {fileID: 0}
+  overrideDone: 0
   cameras:
   - {fileID: 1529937467}
   doors: []
@@ -1368,6 +1369,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 850870594}
   m_CullTransparentMesh: 0
+--- !u!1001 &852295022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.574
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.141
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.2457
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1287471844468237651, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847784640474666816, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2bf8bb037824d1c40b47c58a29487725, type: 3}
 --- !u!1 &917200098
 GameObject:
   m_ObjectHideFlags: 0
@@ -2456,6 +2526,7 @@ MonoBehaviour:
   angle: {x: 0, y: 0, z: 0}
   text: {fileID: 0}
   survCam: {fileID: 0}
+  camPivot: {fileID: 0}
 --- !u!1 &1559594952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3219,16 +3290,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipPosition: {fileID: 580092266}
   tipList:
-  - hedder: General Tips
+  - header: 
     tips:
     - Use the Console to execute commands
     - "Use the up/down arrow key\xB4s to change tips. Or use the buttons."
-  - hedder: Hacking Tips
+  - header: 
     tips:
     - Use hack.camera(id) to control a camera.
     - Use open.door(id) to open and close doors.
     - Use lights.off command to turn the lights off/on.
-  - hedder: Camera Tips
+  - header: 
     tips:
     - Rotate the cameras using the arrow keys.
     - Relay the vital info!

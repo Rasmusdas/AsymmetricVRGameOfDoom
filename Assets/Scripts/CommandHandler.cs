@@ -136,6 +136,7 @@ public class CommandHandler : MonoBehaviour
     public void UnlockDoor(Door door)
     {
         door.locked = false;
+        door.transform.GetComponent<AudioSource>().Play();
     }
 
     public IEnumerator LockDoor(Door door)
@@ -146,6 +147,7 @@ public class CommandHandler : MonoBehaviour
             door.transform.rotation = Quaternion.RotateTowards(door.transform.rotation,Quaternion.Euler(door.startAngle),3);
             yield return new WaitForEndOfFrame();
         }
+        door.transform.GetComponent<AudioSource>().Play();
     }
 
     public void ChangeLightState(GameObject lightObject)
