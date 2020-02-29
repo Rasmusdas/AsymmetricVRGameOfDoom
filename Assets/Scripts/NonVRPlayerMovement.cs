@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class NonVRPlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float movementSpeed;
+
+    private float currentSpeed;
+    public float movementSpeed;
 
     [SerializeField]
     private float mouseSensitivity;
@@ -31,6 +32,7 @@ public class NonVRPlayerMovement : MonoBehaviour
 
     void Update()
     {
+
         // Player Movement
         float x = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
         float y = Input.GetAxis("Vertical") * movementSpeed * Time.deltaTime;
