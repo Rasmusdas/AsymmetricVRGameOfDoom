@@ -9,6 +9,8 @@ public class GuardAI : MonoBehaviour
     public Vector3 lastTargetPosition;
     public Transform player;
 
+    public static bool lightsOff;
+
     public Vector3 startPosition;
 
     public NavMeshAgent agent;
@@ -23,27 +25,37 @@ public class GuardAI : MonoBehaviour
 
     void Update()
     {
-        if(Physics.Raycast(transform.position, player.position-transform.position, out RaycastHit hit,spottingRange))
+        if(lightsOff)
         {
-            Debug.Log(hit.transform.tag);
-            if(hit.transform.tag == "Player")
+            if(!agent.isStopped)
             {
-                currentTarget = hit.transform.position;
-                lastTargetPosition = hit.transform.position;
-                agent.destination = currentTarget;
-                return;
+                agent.isStopped = true;
             }
-        }
-        if(Vector3.Distance(lastTargetPosition,transform.position) > 1f)
-        {
-            Debug.Log(Vector3.Distance(lastTargetPosition, transform.position));
-            currentTarget = lastTargetPosition;
         }
         else
         {
-            lastTargetPosition = startPosition;
-            currentTarget = startPosition;
+            if (Physics.Raycast(transform.position, player.position - transform.position, out RaycastHit hit, spottingRange))
+            {
+                Debug.Log(hit.transform.tag);
+                if (hit.transform.tag == "Player")
+                {
+                    currentTarget = hit.transform.position;
+                    lastTargetPosition = hit.transform.position;
+                    agent.destination = currentTarget;
+                    return;
+                }
+            }
+            if (Vector3.Distance(lastTargetPosition, transform.position) > 1f)
+            {
+                Debug.Log(Vector3.Distance(lastTargetPosition, transform.position));
+                currentTarget = lastTargetPosition;
+            }
+            else
+            {
+                lastTargetPosition = startPosition;
+                currentTarget = startPosition;
+            }
+            agent.destination = currentTarget;
         }
-        agent.destination = currentTarget;
     }
 }

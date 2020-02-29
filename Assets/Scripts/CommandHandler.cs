@@ -11,11 +11,18 @@ public class CommandHandler : MonoBehaviour
     public RenderTexture roofCamera;
     public ConsoleScreen console;
 
+    public float lightMeter;
+    public float rechargeSpeed;
+    public float drainSpeed;
+
+    private bool lights;
+
     [SerializeField]
     private Camera[] cameras;
 
     private void Awake()
     {
+        StartCoroutine(HandleLights());
         currentCam = Camera.current;
         foreach(Camera cam in cameras)
         {
@@ -108,9 +115,45 @@ public class CommandHandler : MonoBehaviour
                     console.WriteLine("Missing argument. Correct syntax: open.[arg]");
                 }
                 break;
+            case "lights":
+                if(input == "off" && lightMeter > 0)
+                {
+                    lights = false;
+                    console.WriteLine("Lights have been turned off");
+                }
+                else if(input == "on")
+                {
+                    lights = true;
+                    GuardAI.lightsOff = true;
+                    console.WriteLine("Lights have been turned on");
+                }
+                else
+                {
+                    console.WriteLine("Missing argument. Correct syntax: lights.on or lights.off");
+                }
+                break;
             default:
                 console.WriteLine(string.Format("\"{0}\" is not a recognized command",s));
                 break;
         }
+    }
+
+    IEnumerator HandleLights()
+    {
+        if(lights && lightMeter < 100)
+        {
+            lightMeter += rechargeSpeed;
+        }
+        else if(!lights && lightMeter > 0)
+        {
+            lightMeter += drainSpeed;
+        }
+        else
+        {
+            GuardAI.lightsOff = false;
+            lights = false;
+        }
+        yield return new WaitForSeconds(0.1f);
+        StartCoroutine(HandleLights());
     }
 }
