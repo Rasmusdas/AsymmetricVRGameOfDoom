@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 public class VaultDoor : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class VaultDoor : MonoBehaviour
     public Door door;
     public Vector3 rotationEnd;
     public TextMesh clipboard;
+    public Interactable interactable;
 
     private void Awake()
     {
@@ -26,9 +28,13 @@ public class VaultDoor : MonoBehaviour
     }
     public void Update()
     {
+        if(!CommandHandler.overrideDone)
+        {
+            movedAmount = 0;
+        }
         Debug.Log(door.transform.localEulerAngles);
         movedAmount += rb.angularVelocity.z;
-        if(movedAmount < 0)
+        if (movedAmount < 0)
         {
             movedAmount = 0;
         }

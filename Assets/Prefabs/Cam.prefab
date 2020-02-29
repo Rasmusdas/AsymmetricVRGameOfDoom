@@ -109,7 +109,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035523702}
-  m_Text: owo
+  m_Text: 
   m_OffsetZ: 0
   m_CharacterSize: 2
   m_LineSpacing: 1
@@ -148,14 +148,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089134010786331381}
-  m_LocalRotation: {x: 0.051067606, y: 0.8630327, z: -0.089108944, w: 0.49459708}
-  m_LocalPosition: {x: 0.27477723, y: 0.0025449991, z: 0.18212321}
+  m_LocalRotation: {x: 0.052608103, y: 0.89781415, z: -0.11173909, w: 0.42270157}
+  m_LocalPosition: {x: 0.29922795, y: 0.0036444664, z: 0.17016098}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3932809574859166115}
   m_Father: {fileID: 1345938104873515151}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 11.790001, y: 120.367004, z: 0}
+  m_LocalEulerAnglesHint: {x: 14.189001, y: 129.57701, z: 0}
 --- !u!114 &850961262000535916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -416,7 +416,7 @@ Camera:
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
-  m_TargetEye: 3
+  m_TargetEye: 0
   m_HDR: 1
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
