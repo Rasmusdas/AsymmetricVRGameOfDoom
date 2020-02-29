@@ -9,6 +9,7 @@ public class SurveillanceCamera : MonoBehaviour
     public float angleChange = 0.1f;
     public Vector3 angle;
     public TextMesh text;
+    public Camera survCam;
 
     private void Awake()
     {
