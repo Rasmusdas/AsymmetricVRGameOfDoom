@@ -5,17 +5,15 @@ using UnityEngine.UI;
 
 public class ConsoleScreen : MonoBehaviour
 {
-    public string[] lines = new string [5];
+    public string[] lines;
 
     // Update is called once per frame
     void Update()
     {
+        lines = new string[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
         {
-            if (lines.Length > i)
-            {
-                transform.GetChild(i).GetComponent<Text>().text = lines[i];
-            }
+            transform.GetChild(i).GetComponent<Text>().text = lines[i];
         }
     }
 
