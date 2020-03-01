@@ -286,6 +286,11 @@ PrefabInstance:
       propertyPath: m_TargetTexture
       value: 
       objectReference: {fileID: 8400000, guid: 873ac4a1123fbba4c8fe686b4ab8eac1, type: 2}
+    - target: {fileID: 4269187102106104893, guid: 844885ae3b2ad924cbb606b810e170fc,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 106e8c28e08792b45b5824d4b5b6dee4, type: 2}
     - target: {fileID: 5915376111577173457, guid: 844885ae3b2ad924cbb606b810e170fc,
         type: 3}
       propertyPath: m_Name
@@ -979,17 +984,17 @@ PrefabInstance:
     - target: {fileID: 6896139301042272329, guid: 8db3edbeab957b04a84fc4c9f605fab7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 6896139301042272329, guid: 8db3edbeab957b04a84fc4c9f605fab7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.714
+      value: 0.908
       objectReference: {fileID: 0}
     - target: {fileID: 6896139301042272329, guid: 8db3edbeab957b04a84fc4c9f605fab7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.459
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 6896139301042272329, guid: 8db3edbeab957b04a84fc4c9f605fab7,
         type: 3}
@@ -1194,6 +1199,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3793724069333965645, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0171
+      objectReference: {fileID: 0}
     - target: {fileID: 6099193433853409785, guid: 2bf8bb037824d1c40b47c58a29487725,
         type: 3}
       propertyPath: m_LocalRotation.y
@@ -1217,7 +1227,12 @@ PrefabInstance:
     - target: {fileID: 6099193433853409785, guid: 2bf8bb037824d1c40b47c58a29487725,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.036
+      value: 0.0312
+      objectReference: {fileID: 0}
+    - target: {fileID: 6099193433853409786, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_Text
+      value: Exit
       objectReference: {fileID: 0}
     - target: {fileID: 7946805710926756543, guid: 2bf8bb037824d1c40b47c58a29487725,
         type: 3}
@@ -1228,6 +1243,7 @@ PrefabInstance:
     - {fileID: 6099193431969250216, guid: 2bf8bb037824d1c40b47c58a29487725, type: 3}
     - {fileID: 6099193431969250217, guid: 2bf8bb037824d1c40b47c58a29487725, type: 3}
     - {fileID: 6099193431969250223, guid: 2bf8bb037824d1c40b47c58a29487725, type: 3}
+    - {fileID: 6099193432536014053, guid: 2bf8bb037824d1c40b47c58a29487725, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2bf8bb037824d1c40b47c58a29487725, type: 3}
 --- !u!1001 &872826543
 PrefabInstance:
@@ -1236,6 +1252,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4269187102106104893, guid: 844885ae3b2ad924cbb606b810e170fc,
+        type: 3}
+      propertyPath: m_TargetTexture
+      value: 
+      objectReference: {fileID: 8400000, guid: 873ac4a1123fbba4c8fe686b4ab8eac1, type: 2}
     - target: {fileID: 5915376111577173457, guid: 844885ae3b2ad924cbb606b810e170fc,
         type: 3}
       propertyPath: m_Name
