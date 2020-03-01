@@ -2247,8 +2247,8 @@ MonoBehaviour:
   - header: Hacking
     number: 1
     tips:
-    - Use the override.[VAULTID] command to unlock the vault door.
-    - Use turnoff.[LIGHTID] to turn a light off temporary.
+    - Use the override.vault[ID] command to unlock the vault door.
+    - Use turnoff.[LIGHTID] to turn off the lights in a room temporarily.
   - header: Controls
     number: 0
     tips:
