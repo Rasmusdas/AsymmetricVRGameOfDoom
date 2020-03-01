@@ -259,7 +259,7 @@ public class CommandHandler : MonoBehaviour
             case "turnoff":
                 if (lightList.ContainsKey(input))
                 {
-                    console.WriteLine(string.Format("Switched off \"{0}\"", input));
+                    console.WriteLine(string.Format("Switched off \"{0}\" for {1} seconds", input,lightTimer));
                     ChangeLightState(lightList[input]);
                 }
                 else if(input.Length != 0)

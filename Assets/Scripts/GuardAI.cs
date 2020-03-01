@@ -34,7 +34,8 @@ public class GuardAI : MonoBehaviour
 
     void Update()
     {
-        foreach(GameObject g in CommandHandler.lightList.Values)
+        lightsOff = true;
+        foreach (GameObject g in CommandHandler.lightList.Values)
         {
             for (int i = 0; i < g.transform.childCount; i++)
             {
@@ -44,6 +45,7 @@ public class GuardAI : MonoBehaviour
                     {
                         if (!Physics.Raycast(player.position, g.transform.GetChild(i).position, out RaycastHit lightHit, Vector3.Distance(player.position, g.transform.GetChild(i).position)))
                         {
+                            Debug.DrawLine(player.position,g.transform.GetChild(i).position);
                             Debug.Log("Found light source!");
                             lightsOff = false;
                             break;
@@ -89,7 +91,8 @@ public class GuardAI : MonoBehaviour
         }
         else
         {
-            agent.ResetPath();
+            currentTarget = startPosition;
+            agent.destination = currentTarget;
         }
     }
 
