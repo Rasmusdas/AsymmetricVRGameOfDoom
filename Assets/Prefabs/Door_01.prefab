@@ -129,6 +129,7 @@ MonoBehaviour:
   startAngle: {x: 0, y: 0, z: 0}
   pivot: {x: 0, y: 0, z: 0.5}
   ignoreRotate: 0
+  openAngle: {x: 0, y: 90, z: 0}
 --- !u!82 &1300722573
 AudioSource:
   m_ObjectHideFlags: 0

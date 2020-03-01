@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     public Vector3 startAngle;
     public Vector3 pivot;
     public bool ignoreRotate = false;
+    public Vector3 openAngle;
 
     private void Start()
     {
@@ -20,10 +21,8 @@ public class Door : MonoBehaviour
 
     public virtual void Update()
     {
-       
         if(!ignoreRotate)
         {
-            transform.localRotation = new Quaternion(0, Mathf.Clamp(transform.localRotation.y, -0.75f, 0.75f), 0, transform.localRotation.w);
             if (locked)
             {
                 rb.constraints = RigidbodyConstraints.FreezeAll;

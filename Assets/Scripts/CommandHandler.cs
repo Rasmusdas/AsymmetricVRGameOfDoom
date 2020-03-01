@@ -146,21 +146,26 @@ public class CommandHandler : MonoBehaviour
         }
     }
 
-    public void UnlockDoor(Door door)
-    {
-        door.locked = false;
-        door.transform.GetComponent<AudioSource>().Play();
-    }
-
     public IEnumerator LockDoor(Door door)
     {
         door.locked = true;
-        while(!Mathf.Approximately(door.transform.localEulerAngles.y, door.startAngle.y))
+        while (!(Mathf.Abs(door.transform.localEulerAngles.y - door.startAngle.y) < 0.1f))
         {
-            door.transform.rotation = Quaternion.RotateTowards(door.transform.rotation,Quaternion.Euler(door.startAngle),3);
+            door.transform.localRotation = Quaternion.RotateTowards(door.transform.localRotation, Quaternion.Euler(door.startAngle), 3);
             yield return new WaitForEndOfFrame();
         }
         door.transform.GetComponent<AudioSource>().Play();
+    }
+
+    public IEnumerator UnlockDoor(Door door)
+    {
+        door.locked = false;
+        door.transform.GetComponent<AudioSource>().Play();
+        while (!(Mathf.Abs(door.transform.localEulerAngles.y - door.openAngle.y) < 0.1f))
+        {
+            door.transform.localRotation = Quaternion.RotateTowards(door.transform.localRotation, Quaternion.Euler(door.openAngle), 3);
+            yield return new WaitForEndOfFrame();
+        }
     }
 
     public void ChangeLightState(GameObject lightObject)
@@ -217,7 +222,7 @@ public class CommandHandler : MonoBehaviour
                 else if(doorList.ContainsKey(input))
                 {
                     console.WriteLine(string.Format("Unlocked door \"{0}\"",input));
-                    UnlockDoor(doorList[input]);
+                    StartCoroutine(UnlockDoor(doorList[input]));
                 }
                 else if(input.Length != 0)
                 {
