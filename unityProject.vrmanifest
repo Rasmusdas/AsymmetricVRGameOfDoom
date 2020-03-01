@@ -5,10 +5,10 @@
       "app_key": "application.generated.unity.asymmetricvrgameofdoom.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "D:\\Unity Projeter\\DDU 03\\VrAsymMultiPlayer\\Assets\\StreamingAssets\\SteamVR\\actions.json",
+      "action_manifest_path": "D:\\Unity\\Project\\AsymmetricVRGameOfDoom\\Assets\\StreamingAssets\\SteamVR\\actions.json",
       "strings": {
         "en_us": {
-          "name": "AsymmetricVRGameOfDoom [Testing]"
+          "name": "Let´s Robber Bank [Testing]"
         }
       }
     }
