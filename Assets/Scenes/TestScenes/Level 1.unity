@@ -8500,7 +8500,7 @@ PrefabInstance:
     - target: {fileID: 6626674311342828786, guid: 1419c143aadff7c4ebe906e32d83f058,
         type: 3}
       propertyPath: m_RootOrder
-      value: 85
+      value: 86
       objectReference: {fileID: 0}
     - target: {fileID: 6626674311342828786, guid: 1419c143aadff7c4ebe906e32d83f058,
         type: 3}
@@ -9216,11 +9216,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HackerScreenV4 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4866822421053416788, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4866822421053416792, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
