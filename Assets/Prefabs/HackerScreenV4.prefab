@@ -2243,10 +2243,11 @@ MonoBehaviour:
     tips:
     - Use hack.[CAMERAID] to control a camera.
     - Use open.[DOORID] to unlock doors.
-    - Use the override.[VAULTID] command to unlock the vault door.
+    - Use close.[DOORID] to lock doors.
   - header: Hacking
     number: 1
     tips:
+    - Use the override.[VAULTID] command to unlock the vault door.
     - Use turnoff.[LIGHTID] to turn a light off temporary.
   - header: Controls
     number: 0
