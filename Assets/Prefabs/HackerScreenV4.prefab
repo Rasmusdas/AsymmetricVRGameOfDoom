@@ -135,7 +135,6 @@ MonoBehaviour:
   lightMeter: 0
   lightTimer: 0
   vaultdoor: {fileID: 0}
-  overrideDone: 0
   cameras:
   - {fileID: 0}
   - {fileID: 0}
