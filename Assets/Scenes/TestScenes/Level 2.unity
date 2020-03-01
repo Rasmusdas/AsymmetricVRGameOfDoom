@@ -1507,10 +1507,50 @@ PrefabInstance:
       propertyPath: m_CullingMask.m_Bits
       value: 11575
       objectReference: {fileID: 0}
+    - target: {fileID: 6896139301042018773, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896139301042020561, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896139301042022477, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896139301042024821, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896139301042036431, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896139301042052861, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896139301042199157, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 6896139301042210865, guid: 8db3edbeab957b04a84fc4c9f605fab7,
         type: 3}
       propertyPath: m_Name
       value: JacobPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6896139301042218477, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6896139301042272329, guid: 8db3edbeab957b04a84fc4c9f605fab7,
         type: 3}
@@ -1571,6 +1611,16 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897139313708610871, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6897139314465113185, guid: 8db3edbeab957b04a84fc4c9f605fab7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8db3edbeab957b04a84fc4c9f605fab7, type: 3}
