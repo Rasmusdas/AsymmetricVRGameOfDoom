@@ -24,6 +24,7 @@ public class EndLevelManager : MonoBehaviour
 
     public void NextLevel()
     {
+        Destroy(GameObject.FindGameObjectWithTag("Player"));
         if (LevelManager.LastLevel == "Tutorial")
         {
             SceneManager.LoadScene("Level 1");
