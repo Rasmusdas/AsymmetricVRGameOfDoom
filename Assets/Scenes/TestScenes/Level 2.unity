@@ -631,6 +631,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67dc7e18269f44345b773c9c985b96a5, type: 3}
+--- !u!114 &32485863 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5743496361733971643, guid: 6e4470c432cf046479ed2a8a60810084,
+    type: 3}
+  m_PrefabInstance: {fileID: 1516709001}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e0dbedc35f1f524d9887f1ccbb63483, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &32908413 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6099193431969250216, guid: 2bf8bb037824d1c40b47c58a29487725,
+    type: 3}
+  m_PrefabInstance: {fileID: 136673744}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c1f45b3acc2e84b86bb88b3a98767a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &33226604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1732,6 +1756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Door_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5840155236043295625, guid: 2bf8bb037824d1c40b47c58a29487725,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.0124
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bf8bb037824d1c40b47c58a29487725, type: 3}
@@ -6171,6 +6200,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4866822419724986657, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: vaultdoor
+      value: 
+      objectReference: {fileID: 32485863}
     - target: {fileID: 4866822421053416788, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
       propertyPath: m_Name
@@ -15589,7 +15623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588880583}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.225, y: 0.01635633, z: -0.269}
+  m_LocalPosition: {x: 0.225, y: 0.01635633, z: -0.2469}
   m_LocalScale: {x: 1, y: 1.1, z: 1}
   m_Children:
   - {fileID: 782605424}
@@ -15609,8 +15643,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 782605425}
-  text1: {fileID: 0}
-  door: {fileID: 0}
+  text1: {fileID: 782605425}
+  door: {fileID: 32908413}
 --- !u!23 &1588880586
 MeshRenderer:
   m_ObjectHideFlags: 0
