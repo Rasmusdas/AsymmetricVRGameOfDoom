@@ -7,10 +7,14 @@ public class ConsoleScreen : MonoBehaviour
 {
     public string[] lines;
 
+    private void Start()
+    {
+        lines = new string[transform.childCount];
+    }
+
     // Update is called once per frame
     void Update()
     {
-        lines = new string[transform.childCount];
         for (int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).GetComponent<Text>().text = lines[i];
