@@ -29,27 +29,33 @@ public class GuardAI : MonoBehaviour
     {
         foreach(GameObject g in CommandHandler.lightList.Values)
         {
-            if(g.GetComponent<Light>().enabled)
+            for (int i = 0; i < g.transform.childCount; i++)
             {
-                if (!Physics.Raycast(player.position, g.transform.position - transform.position, out RaycastHit lightHit, Vector3.Distance(player.position,g.transform.position)))
+                if (g.transform.GetChild(i).TryGetComponent(out Light l))
                 {
-                    Debug.Log("Found light source!");
-                    lightsOff = false;
-                    break;
+                    if(l.enabled)
+                    {
+                        if (!Physics.Raycast(player.position, g.transform.GetChild(i).position, out RaycastHit lightHit, Vector3.Distance(player.position, g.transform.GetChild(i).position)))
+                        {
+                            lightsOff = false;
+                            break;
+                        }
+                        else
+                        {
+                            lightsOff = true;
+                        }
+                    }
                 }
-                else
-                {
-                    Debug.Log("Blocked Source");
-                    lightsOff = true;
-                }
+            }
+            if(!lightsOff)
+            {
+                break;
             }
         }
         if(!lightsOff)
         {
-            Debug.DrawLine(transform.position, (player.position - transform.position)+transform.position);
             if (Physics.Raycast(transform.position, player.position+Vector3.up/2 - transform.position, out RaycastHit hit, spottingRange))
             {
-                Debug.Log(hit.transform.tag);
                 if (hit.transform.tag == "Player")
                 {
                     currentTarget = hit.transform.position;
