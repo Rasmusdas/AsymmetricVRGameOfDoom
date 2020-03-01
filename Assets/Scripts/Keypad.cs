@@ -5,6 +5,7 @@ using UnityEngine;
 public class Keypad : MonoBehaviour
 {
     public TextMesh text;
+    public TextMesh text1;
     public Door door;
 
     void Start()
@@ -12,6 +13,7 @@ public class Keypad : MonoBehaviour
         if(door != null)
         {
             text.text = door.name;
+            text1.text = door.name;
         }
     }
 
