@@ -84,6 +84,7 @@ public class CommandHandler : MonoBehaviour
             {
                 random = Random.Range(0, 99);
             }
+            taken.Add(random);
             if (random < 10)
             {
                 light.name = "0" + random;
@@ -170,12 +171,14 @@ public class CommandHandler : MonoBehaviour
 
     public void ChangeLightState(GameObject lightObject)
     {
-        Light light = lightObject.GetComponent<Light>();
-        if (lightList.ContainsKey(light.name.ToLower()))
+        for (int i = 0; i < lightObject.transform.childCount; i++)
         {
-            light.GetComponent<Light>().enabled = false;
-            StartCoroutine(RelightLights(light));
-        }   
+            if(lightObject.transform.GetChild(i).TryGetComponent(out Light l))
+            {
+                l.enabled = false;
+                StartCoroutine(RelightLights(l));
+            }
+        }
     }
 
     public void HandleCommand(string s)
@@ -251,7 +254,7 @@ public class CommandHandler : MonoBehaviour
             case "turnoff":
                 if (lightList.ContainsKey(input))
                 {
-                    console.WriteLine(string.Format("Turned off \"{0}\"", input));
+                    console.WriteLine(string.Format("Switched off \"{0}\"", input));
                     ChangeLightState(lightList[input]);
                 }
                 else if(input.Length != 0)
