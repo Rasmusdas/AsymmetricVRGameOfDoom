@@ -28,8 +28,11 @@ public class CommandHandler : MonoBehaviour
     [SerializeField]
     private GameObject[] lights;
 
-    private void Awake()
+    private void Start()
     {
+        doorList = new Dictionary<string, Door>();
+        cameraList = new Dictionary<string, GameObject>();
+        lightList = new Dictionary<string, GameObject>();
         cameras = GameObject.FindGameObjectsWithTag("SurvCam");
         GameObject[] tempDoors = GameObject.FindGameObjectsWithTag("Door");
         doors = new Door[tempDoors.Length];
