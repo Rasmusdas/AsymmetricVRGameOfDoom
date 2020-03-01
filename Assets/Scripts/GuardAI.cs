@@ -18,8 +18,15 @@ public class GuardAI : MonoBehaviour
 
     public float spottingRange;
 
+    public List<GameObject> lightsy;
+
     private void Start()
     {
+        lightsy = new List<GameObject>();
+        foreach(var v in CommandHandler.lightList.Values)
+        {
+            lightsy.Add(v);
+        }
         startPosition = transform.position;
         lastTargetPosition = startPosition;
         agent = GetComponent<NavMeshAgent>();
@@ -37,11 +44,14 @@ public class GuardAI : MonoBehaviour
                     {
                         if (!Physics.Raycast(player.position, g.transform.GetChild(i).position, out RaycastHit lightHit, Vector3.Distance(player.position, g.transform.GetChild(i).position)))
                         {
+                            Debug.Log("Found light source!");
                             lightsOff = false;
                             break;
                         }
                         else
                         {
+                            Debug.Log("Blocked Source");
+                            Debug.Log(lightHit.transform.name);
                             lightsOff = true;
                         }
                     }
@@ -56,6 +66,8 @@ public class GuardAI : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, player.position+Vector3.up/2 - transform.position, out RaycastHit hit, spottingRange))
             {
+                Debug.Log(hit.transform.tag);
+                Debug.DrawLine(transform.position, hit.point);
                 if (hit.transform.tag == "Player")
                 {
                     currentTarget = hit.transform.position;
@@ -101,6 +113,7 @@ public class GuardAI : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            Destroy(other.gameObject);
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
     }
