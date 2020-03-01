@@ -166,7 +166,7 @@ PrefabInstance:
     - target: {fileID: 4866822421053416788, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4866822421053416792, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
@@ -271,6 +271,91 @@ PrefabInstance:
     - target: {fileID: 4866822421053416792, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[2].tips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[3].tips.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[0].header
+      value: General
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[1].header
+      value: Hacking
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[2].header
+      value: Hacking
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[2].tips.Array.data[0]
+      value: Use turnoff.[LIGHTID] to turn a light off temporary.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[2].tips.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[2].tips.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[3].header
+      value: Controls
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[3].number
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[3].tips.Array.data[0]
+      value: Rotate the cameras using the arrow keys.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[3].tips.Array.data[1]
+      value: Relay the vital info!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[2].number
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[1].tips.Array.data[2]
+      value: Use the override.[VAULTID] command to unlock the vault door.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[0].number
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4866822421313949886, guid: b08cdc4795d6d19469827d4ab1f7ad9a,
+        type: 3}
+      propertyPath: tipList.Array.data[1].number
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

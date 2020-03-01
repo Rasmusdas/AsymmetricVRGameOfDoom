@@ -2233,16 +2233,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipPosition: {fileID: 4866822420469726040}
   tipList:
-  - header: 
+  - header: General
+    number: 0
     tips:
     - Use the Console to execute commands
     - Use the up/down arrow keys to change tips or use the buttons.
-  - header: 
+  - header: Hacking
+    number: 0
     tips:
     - Use hack.[CAMERAID] to control a camera.
     - Use open.[DOORID] to unlock doors.
-    - Use the override.[VAULTID] command to unlock the vault door
-  - header: 
+    - Use the override.[VAULTID] command to unlock the vault door.
+  - header: Hacking
+    number: 1
+    tips:
+    - Use turnoff.[LIGHTID] to turn a light off temporary.
+  - header: Controls
+    number: 0
     tips:
     - Rotate the cameras using the arrow keys.
     - Relay the vital info!

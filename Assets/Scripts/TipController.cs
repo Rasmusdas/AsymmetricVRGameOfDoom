@@ -33,7 +33,7 @@ public class TipController : MonoBehaviour
         }
     }
 
-    public void MoveUp()
+    public void MoveDown()
     {
         if (currentTip < tipList.Count - 1)
         {
@@ -46,7 +46,7 @@ public class TipController : MonoBehaviour
         updateText();
     }
 
-    public void MoveDown()
+    public void MoveUp()
     {
         if (currentTip > 0)
         {
@@ -65,7 +65,18 @@ public class TipController : MonoBehaviour
         string temp = "";
         for (int i = 0; i < tipList[currentTip].tips.Count; i++)
         {
-            temp += i+1 + ". " + tipList[currentTip].tips[i] + "\n";
+            int previusTipsCount = 0;
+            if (tipList[currentTip].number != 0)
+            {   
+                for (int j = 0; j < tipList.Count; j++)
+                {
+                    if (tipList[j].header == tipList[currentTip].header && tipList[j] != tipList[currentTip])
+                    {
+                        previusTipsCount += tipList[currentTip].tips.Count;
+                    }
+                }
+            }
+            temp += (i+1+previusTipsCount) + ". " + tipList[currentTip].tips[i] + "\n";
         }
         tipText.text = temp;
     }
@@ -75,5 +86,6 @@ public class TipController : MonoBehaviour
 public class Tip
 {
     public string header;
+    public int number = 0;
     public List<string> tips;
 }
