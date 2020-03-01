@@ -46,6 +46,7 @@ public class CommandHandler : MonoBehaviour
             {
                 random = Random.Range(0, 99);
             }
+            taken.Add(random);
             if (random < 10)
             {
                 cam.name = "0" + random;
@@ -67,6 +68,7 @@ public class CommandHandler : MonoBehaviour
             {
                 random = Random.Range(0, 99);
             }
+            taken.Add(random);
             if (random < 10)
             {
                 door.name = "0" + random;
