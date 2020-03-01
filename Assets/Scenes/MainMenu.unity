@@ -935,7 +935,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Asymmetric VR Game of DOOOOOOOM!
+  m_Text: "Let\xB4s Robber Bank"
 --- !u!222 &1589622097
 CanvasRenderer:
   m_ObjectHideFlags: 0

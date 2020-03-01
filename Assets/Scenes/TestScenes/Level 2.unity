@@ -2295,7 +2295,7 @@ PrefabInstance:
     - target: {fileID: 6896139301042272329, guid: 8db3edbeab957b04a84fc4c9f605fab7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.7
+      value: -3.27
       objectReference: {fileID: 0}
     - target: {fileID: 6896139301042272329, guid: 8db3edbeab957b04a84fc4c9f605fab7,
         type: 3}
@@ -3237,7 +3237,7 @@ GameObject:
   - component: {fileID: 254247323}
   m_Layer: 0
   m_Name: TP4
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4396,7 +4396,7 @@ GameObject:
   - component: {fileID: 383071318}
   m_Layer: 0
   m_Name: Traget
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4525,7 +4525,7 @@ GameObject:
   - component: {fileID: 413882117}
   m_Layer: 0
   m_Name: Traget
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5421,7 +5421,7 @@ GameObject:
   - component: {fileID: 515406730}
   m_Layer: 0
   m_Name: Col
-  m_TagString: Player
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5448,7 +5448,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515406728}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 3.9357157, y: 1, z: 3.5888634}
@@ -8810,7 +8810,7 @@ GameObject:
   - component: {fileID: 946413199}
   m_Layer: 0
   m_Name: Traget
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10556,7 +10556,7 @@ GameObject:
   - component: {fileID: 1081130977}
   m_Layer: 0
   m_Name: Col
-  m_TagString: Player
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10583,7 +10583,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081130975}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.162962, y: 1, z: 3.0202484}
@@ -12701,7 +12701,7 @@ GameObject:
   - component: {fileID: 1211841827}
   m_Layer: 0
   m_Name: TP3
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15841,7 +15841,7 @@ GameObject:
   - component: {fileID: 1604522306}
   m_Layer: 0
   m_Name: Col
-  m_TagString: Player
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15881,7 +15881,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604522304}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.4784613, y: 1, z: 3.4960938}
@@ -16996,7 +16996,7 @@ GameObject:
   - component: {fileID: 1738175020}
   m_Layer: 0
   m_Name: Col
-  m_TagString: Player
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17036,7 +17036,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738175018}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.0045505, y: 1, z: 3.4630852}
@@ -18223,7 +18223,7 @@ GameObject:
   - component: {fileID: 1926376922}
   m_Layer: 0
   m_Name: TPs
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18942,7 +18942,7 @@ GameObject:
   - component: {fileID: 1989532561}
   m_Layer: 0
   m_Name: TP2
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19471,7 +19471,7 @@ GameObject:
   - component: {fileID: 2029098482}
   m_Layer: 0
   m_Name: Traget
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19990,7 +19990,7 @@ GameObject:
   - component: {fileID: 2084299587}
   m_Layer: 0
   m_Name: TP1
-  m_TagString: Untagged
+  m_TagString: Elevator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
