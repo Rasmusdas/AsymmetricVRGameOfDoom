@@ -10,6 +10,7 @@ TagManager:
   - GameLights
   - Door
   - SurvCam
+  - Elevator
   layers:
   - Default
   - TransparentFX

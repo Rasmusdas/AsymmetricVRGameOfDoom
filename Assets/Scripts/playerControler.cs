@@ -21,6 +21,7 @@ public class playerControler : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(LevelManager.LastLevel);
         currentSpeed = speed;
         if(sprint.active)
         {
@@ -36,5 +37,15 @@ public class playerControler : MonoBehaviour
     private void FixedUpdate()
     {
         charCon.Move(Time.deltaTime * currentSpeed * Vector3.ProjectOnPlane(dir, Vector3.up) - new Vector3(0, 9.81f, 0) * Time.deltaTime);
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag == "Elevator")
+        {
+            GetComponent<CharacterController>().enabled = false;
+            transform.position = hit.gameObject.GetComponent<TPElevator>().tpTarget.position;
+            GetComponent<CharacterController>().enabled = true;
+        }
     }
 }

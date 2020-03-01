@@ -31,7 +31,8 @@ public class EndLevelManager : MonoBehaviour
         else
         {
             int.TryParse(LevelManager.LastLevel.Split(' ')[1], out int number);
-            SceneManager.LoadScene("Level " + number);
+            DuffelbagManager.HasTakenGold = false;
+            SceneManager.LoadScene("Level " + (number+1));
         }
     }
 }

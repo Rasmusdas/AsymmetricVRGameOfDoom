@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DuffelbagManager : MonoBehaviour
 {
-    public static bool HasTakenGold { get { return take > 0; } }
+    public static bool HasTakenGold { get; set; }
     public static float take;
     public float maxWorth;
     public float minWorth;
@@ -13,6 +13,7 @@ public class DuffelbagManager : MonoBehaviour
     {
         if (other.tag == "GoldBar")
         {
+            HasTakenGold = true;
             take += Random.Range(minWorth, maxWorth);
             Destroy(other.gameObject);
         }
